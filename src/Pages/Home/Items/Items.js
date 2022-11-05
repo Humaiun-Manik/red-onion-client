@@ -25,6 +25,7 @@ const Items = () => {
           <Item key={item.id} item={item}></Item>
         ))}
       </Row>
+      <button className="checkout-btn my-5 border-0 d-block mx-auto">Checkout Your Food</button>
     </div>
   );
 };

@@ -4,7 +4,7 @@ import { Card, Col } from "react-bootstrap";
 
 const Item = ({ item }) => {
   return (
-    <Col className="item">
+    <Col onClick={() => console.log(`id:${item.id}`)} className="item">
       <Card className="text-center border-0">
         <Card.Img className="w-75 mx-auto mb-4" variant="top" src={item.img} />
         <Card.Body>

@@ -9,3 +9,10 @@
   color: #f91944;
   border-bottom: 3px solid #f91944;
 }
+.checkout-btn {
+  color: white;
+  font-size: 22px;
+  border-radius: 10px;
+  padding: 10px 50px;
+  background-color: #b1b1b1;
+}

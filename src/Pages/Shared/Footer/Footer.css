@@ -1,0 +1,15 @@
+.footer-container {
+  background-color: #000000da;
+}
+.footer-container img {
+  width: 150px;
+}
+.footer-container ul li {
+  color: white;
+  font-size: 18px;
+  list-style: none;
+  padding: 5px 0;
+}
+.footer-container p {
+  color: gray;
+}

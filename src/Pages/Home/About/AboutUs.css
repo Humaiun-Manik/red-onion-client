@@ -1,0 +1,19 @@
+.about-us p {
+  color: gray;
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 15px;
+}
+.about-us a {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+}
+.arrow-icon {
+  width: 20px;
+  height: 20px;
+  color: white;
+  background-color: #7ac948;
+  border-radius: 50%;
+  padding: 5px;
+}
