@@ -9,6 +9,9 @@
   font-size: 50px;
   font-weight: 400;
 }
+.search-form {
+  width: 75%;
+}
 .search-btn {
   color: white;
   background-color: #f91944;
@@ -16,4 +19,14 @@
   border-radius: 30px;
   padding: 10px 40px;
   margin-left: -50px;
+  transition: 0.5s;
+}
+.search-btn:hover {
+  background-color: black;
+}
+
+@media only screen and (max-width: 576px) {
+  .search-form {
+    width: 100%;
+  }
 }

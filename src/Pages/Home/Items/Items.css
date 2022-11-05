@@ -1,0 +1,11 @@
+.items-container button {
+  border: none;
+  border: 3px solid white;
+  font-size: 22px;
+  font-weight: 600;
+  margin: 0 30px;
+}
+.items-container button:focus {
+  color: #f91944;
+  border-bottom: 3px solid #f91944;
+}
