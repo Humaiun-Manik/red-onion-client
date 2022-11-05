@@ -2,15 +2,17 @@ import React from "react";
 import "./Item.css";
 import { Card, Col } from "react-bootstrap";
 
-const Item = ({ item }) => {
+const Item = ({ item, handleItemDetails }) => {
+  const { id, name, img, title, price } = item;
+
   return (
-    <Col onClick={() => console.log(`id:${item.id}`)} className="item">
+    <Col onClick={() => handleItemDetails(id)} className="item">
       <Card className="text-center border-0">
-        <Card.Img className="w-75 mx-auto mb-4" variant="top" src={item.img} />
+        <Card.Img className="w-75 mx-auto mb-4" variant="top" src={img} />
         <Card.Body>
-          <Card.Title>{item.name}</Card.Title>
-          <p>{item.description}</p>
-          <h3>$ {item.price}</h3>
+          <Card.Title>{name}</Card.Title>
+          <p>{title}</p>
+          <h3>$ {price}</h3>
         </Card.Body>
       </Card>
     </Col>

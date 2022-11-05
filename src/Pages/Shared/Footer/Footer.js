@@ -31,10 +31,10 @@ const Footer = () => {
           </Col>
         </Row>
         <Row className="mt-5 pt-5">
-          <Col xs={12} md={7}>
+          <Col xs={12} lg={7}>
             <p>Copyright &#169; {fullYear} Online food</p>
           </Col>
-          <Col xs={12} md={5}>
+          <Col xs={12} lg={5}>
             <ul className="d-flex">
               <li className="mx-4">Privacy Policy.</li>
               <li className="mx-4">Terms of Use</li>

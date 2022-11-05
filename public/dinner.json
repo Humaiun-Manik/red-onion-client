@@ -3,42 +3,48 @@
     "id": 1,
     "name": "Salmon with Grapefruit and Lentil Salad",
     "price": "9.99",
-    "description": "How we dream about our future",
+    "title": "How we dream about our future",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores provident, ipsum est quod sapiente laboriosam ducimus iusto nesciunt veniam asperiores.",
     "img": "https://i.ibb.co/bz7Y7KJ/dinner6.png"
   },
   {
     "id": 2,
     "name": "Lemony Salmon Piccata",
     "price": "11.99",
-    "description": "How we dream about our future",
+    "title": "How we dream about our future",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores provident, ipsum est quod sapiente laboriosam ducimus iusto nesciunt veniam asperiores.",
     "img": "https://i.ibb.co/VQCbVwV/dinner2.png"
   },
   {
     "id": 3,
     "name": "Pork Tenderloin with Quinoa Pilaf",
     "price": "14.99",
-    "description": "How we dream about our future",
+    "title": "How we dream about our future",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores provident, ipsum est quod sapiente laboriosam ducimus iusto nesciunt veniam asperiores.",
     "img": "https://i.ibb.co/W6qbHNq/dinner5.png"
   },
   {
     "id": 4,
     "name": "French fries with cheese",
     "price": "8.99",
-    "description": "How we dream about our future",
+    "title": "How we dream about our future",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores provident, ipsum est quod sapiente laboriosam ducimus iusto nesciunt veniam asperiores.",
     "img": "https://i.ibb.co/HxZmQmf/dinner4.png"
   },
   {
     "id": 5,
     "name": "Garlic Butter Baked Salmon",
     "price": "6.99",
-    "description": "How we dream about our future",
+    "title": "How we dream about our future",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores provident, ipsum est quod sapiente laboriosam ducimus iusto nesciunt veniam asperiores.",
     "img": "https://i.ibb.co/GcQQVzd/dinner3.png"
   },
   {
     "id": 6,
     "name": "Baked Chicken",
     "price": "10.99",
-    "description": "How we dream about our future",
+    "title": "How we dream about our future",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores provident, ipsum est quod sapiente laboriosam ducimus iusto nesciunt veniam asperiores.",
     "img": "https://i.ibb.co/bNLFLrD/dinner1.png"
   }
 ]
