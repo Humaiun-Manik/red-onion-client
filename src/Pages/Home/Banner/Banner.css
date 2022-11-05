@@ -1,0 +1,19 @@
+.banner-container {
+  background-image: url("../../../images/bannerbackground.png");
+  background-size: center;
+  background-repeat: no-repeat;
+  height: 600px;
+}
+
+.search-container h1 {
+  font-size: 50px;
+  font-weight: 400;
+}
+.search-btn {
+  color: white;
+  background-color: #f91944;
+  border: none;
+  border-radius: 30px;
+  padding: 10px 40px;
+  margin-left: -50px;
+}
