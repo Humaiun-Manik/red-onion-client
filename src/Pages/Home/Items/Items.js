@@ -24,17 +24,14 @@ const Items = () => {
     setItemId(id);
   };
 
-  const item = items.find((item) => item.id === itemId);
+  // const item = items.find((item) => item.id === itemId);
 
   return (
     <div className="container">
       <div className="items-container d-flex justify-content-center my-5">
-        <button onClick={() => handleLoadItems("breakfast.json")}>Breakfast</button>
-        <button onClick={() => handleLoadItems("lunch.json")}>Lunch</button>
-        <button onClick={() => handleLoadItems("dinner.json")}>Dinner</button>
-        {/* <button onClick={async () => await setLoadItems("breakfast.json")}>Breakfast</button>
-        <button onClick={async () => await setLoadItems("lunch.json")}>Lunch</button>
-        <button onClick={async () => await setLoadItems("dinner.json")}>Dinner</button> */}
+        <button onClick={async () => await handleLoadItems("breakfast.json")}>Breakfast</button>
+        <button onClick={async () => await handleLoadItems("lunch.json")}>Lunch</button>
+        <button onClick={async () => await handleLoadItems("dinner.json")}>Dinner</button>
       </div>
       {!itemId ? (
         <Row xs={1} md={2} lg={3} className="g-5 my-5">
@@ -43,7 +40,7 @@ const Items = () => {
           ))}
         </Row>
       ) : (
-        <ItemDetails item={item}></ItemDetails>
+        <ItemDetails itemId={itemId} items={items}></ItemDetails>
       )}
       <button className="checkout-btn my-5 border-0 d-block mx-auto">Checkout Your Food</button>
     </div>
