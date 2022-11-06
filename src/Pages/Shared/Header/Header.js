@@ -2,11 +2,13 @@ import React from "react";
 import "./Header.css";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import logo from "../../../images/logo2.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartPlus } from "@fortawesome/free-solid-svg-icons";
 
 const Header = () => {
+  const navigate = useNavigate();
+
   return (
     <Navbar className="py-4 menu-items" collapseOnSelect expand="lg" bg="light" variant="light">
       <Container>
@@ -22,7 +24,9 @@ const Header = () => {
             <Nav.Link as={Link} to="/login">
               Login
             </Nav.Link>
-            <button className="sign-up-btn">Sign up</button>
+            <button onClick={() => navigate("/signup")} className="sign-up-btn">
+              Sign up
+            </button>
           </Nav>
         </Navbar.Collapse>
       </Container>

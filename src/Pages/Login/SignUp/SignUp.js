@@ -1,11 +1,10 @@
 import React from "react";
 import { Button, Col, Form, Row } from "react-bootstrap";
-import "./SignIn.css";
-import logo from "../../../images/logo2.png";
 import { Link } from "react-router-dom";
+import logo from "../../../images/logo2.png";
 import SocialLogin from "../SocialLogin/SocialLogin";
 
-const SignIn = () => {
+const SignUp = () => {
   return (
     <div className="container my-5 py-4">
       <Row className="login-container">
@@ -16,18 +15,24 @@ const SignIn = () => {
           </div>
           <SocialLogin></SocialLogin>
           <Form>
+            <Form.Group className="mb-5" controlId="formBasicEmail">
+              <Form.Control type="text" placeholder="Name" required />
+            </Form.Group>
             <Form.Group className="mb-5" controlId="formBasicPassword">
               <Form.Control type="email" placeholder="Email" required />
             </Form.Group>
             <Form.Group className="mb-5" controlId="formBasicPassword">
               <Form.Control type="password" placeholder="Password" required />
             </Form.Group>
+            <Form.Group className="mb-5" controlId="formBasicPassword">
+              <Form.Control type="password" placeholder="Confirm Password" required />
+            </Form.Group>
             <Button className="w-100" variant="primary" type="submit">
-              Sign In
+              Sign Up
             </Button>
           </Form>
           <p>
-            Don't have an account? <Link to={"/signup"}>Sign up.</Link>
+            Already have an account? <Link to={"/login"}>Sign in.</Link>
           </p>
         </Col>
         <Col md={3}></Col>
@@ -36,4 +41,4 @@ const SignIn = () => {
   );
 };
 
-export default SignIn;
+export default SignUp;
