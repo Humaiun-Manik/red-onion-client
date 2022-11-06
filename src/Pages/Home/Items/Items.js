@@ -24,8 +24,6 @@ const Items = () => {
     setItemId(id);
   };
 
-  // const item = items.find((item) => item.id === itemId);
-
   return (
     <div className="container">
       <div className="items-container d-flex justify-content-center my-5">

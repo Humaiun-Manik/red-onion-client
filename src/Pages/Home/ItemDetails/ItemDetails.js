@@ -59,7 +59,6 @@ const ItemDetails = ({ itemId, items }) => {
         <button className="add-btn">
           <FontAwesomeIcon className="me-3" icon={faCartPlus}></FontAwesomeIcon>Add
         </button>
-
         <div className="d-flex my-5 py-4 items-img-container">
           {itemsImg.map((itemImg) => (
             <img key={itemImg.id} src={itemImg.img} alt="" />
