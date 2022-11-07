@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./ItemDetails.css";
 import { Col, Row } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -6,12 +6,19 @@ import { faCartPlus, faMinus, faPlus, faAngleRight } from "@fortawesome/free-sol
 import { useState } from "react";
 
 const ItemDetails = ({ itemId, items }) => {
-  const item = items.find((item) => item.id === itemId);
+  // const item = items.find((item) => item.id === itemId);
+  const itemDetails = items.find((item) => item.id === itemId);
+  const [item, setItem] = useState(itemDetails);
   const { name, price, description, img } = item;
-  const [itemNumber, setItemNumber] = useState(1);
-  const [totalPrice, setTotalPrice] = useState(parseFloat(price));
+  const [itemNumber, setItemNumber] = useState();
+  const [totalPrice, setTotalPrice] = useState();
   const [itemsImg, setItemsImg] = useState(items.slice(0, 2));
   const [currentIndex, setCurrentIndex] = useState(2);
+
+  useEffect(() => {
+    setTotalPrice(parseFloat(price));
+    setItemNumber(1);
+  }, [item]);
 
   const handleItemMinus = () => {
     if (itemNumber <= 1) {
@@ -44,9 +51,9 @@ const ItemDetails = ({ itemId, items }) => {
       <Col xs={12} md={5} className="mt-5">
         <h1>{name}</h1>
         <p>{description}</p>
-        <div className="d-flex mt-5">
-          <h1>${totalPrice}</h1>
-          <div className="d-flex align-items-center ms-5 minus-plus-btn">
+        <div className="price-container d-flex justify-content-between mt-5">
+          <h1 className="w-25">${totalPrice}</h1>
+          <div className="d-flex align-items-center minus-plus-btn">
             <button onClick={handleItemMinus} className="minus-btn fs-5">
               <FontAwesomeIcon icon={faMinus}></FontAwesomeIcon>
             </button>
@@ -59,11 +66,11 @@ const ItemDetails = ({ itemId, items }) => {
         <button className="add-btn">
           <FontAwesomeIcon className="me-3" icon={faCartPlus}></FontAwesomeIcon>Add
         </button>
-        <div className="d-flex my-5 py-4 items-img-container">
+        <div className="d-flex align-items-center my-5 py-4 items-img-container">
           {itemsImg.map((itemImg) => (
-            <img key={itemImg.id} src={itemImg.img} alt="" />
+            <img onClick={() => setItem(itemImg)} key={itemImg.id} src={itemImg.img} alt="" />
           ))}
-          <button className="angle-right-btn" onClick={displayNextTwoImg}>
+          <button className="angle-right-btn w-100" onClick={displayNextTwoImg}>
             <FontAwesomeIcon icon={faAngleRight}></FontAwesomeIcon>
           </button>
         </div>

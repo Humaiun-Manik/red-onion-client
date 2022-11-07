@@ -1,6 +1,5 @@
 .item-details h1 {
   font-size: 50px;
-  /* width: 200px; */
 }
 .item-details h3 {
   width: 25px;
@@ -11,6 +10,9 @@
   font-size: 20px;
   font-weight: 500;
   margin-top: 50px;
+}
+.price-container {
+  margin-right: 100px;
 }
 .add-btn {
   color: white;
@@ -43,9 +45,13 @@
   color: #636363;
   border: none;
   background-color: white;
+  /* width: 100px; */
 }
 
 @media only screen and (max-width: 576px) {
+  .price-container {
+    margin-right: 0;
+  }
   .minus-plus-btn button {
     margin: 10px;
   }
