@@ -1,6 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
+import Cart from "./Pages/Cart/Cart";
 import Home from "./Pages/Home/Home/Home";
 import SignIn from "./Pages/Login/SignIn/SignIn";
 import SignUp from "./Pages/Login/SignUp/SignUp";
@@ -16,6 +17,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="login" element={<SignIn />} />
         <Route path="signup" element={<SignUp />} />
+        <Route path="cart" element={<Cart />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />

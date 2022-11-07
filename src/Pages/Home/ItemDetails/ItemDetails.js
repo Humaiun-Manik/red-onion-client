@@ -6,18 +6,18 @@ import { faCartPlus, faMinus, faPlus, faAngleRight } from "@fortawesome/free-sol
 import { useState } from "react";
 
 const ItemDetails = ({ itemId, items }) => {
-  // const item = items.find((item) => item.id === itemId);
   const itemDetails = items.find((item) => item.id === itemId);
   const [item, setItem] = useState(itemDetails);
-  const { name, price, description, img } = item;
   const [itemNumber, setItemNumber] = useState();
   const [totalPrice, setTotalPrice] = useState();
   const [itemsImg, setItemsImg] = useState(items.slice(0, 2));
   const [currentIndex, setCurrentIndex] = useState(2);
 
+  const { name, price, description, img } = item;
+
   useEffect(() => {
-    setTotalPrice(parseFloat(price));
     setItemNumber(1);
+    setTotalPrice(parseFloat(price));
   }, [item]);
 
   const handleItemMinus = () => {

@@ -6,13 +6,23 @@
   font-size: 22px;
   font-weight: 600;
   margin-right: 30px;
+  transition: 0.5s;
+}
+.menu-items a:hover {
+  color: #f91944;
 }
 
 .sign-up-btn {
   font-size: 18px;
   color: white;
   background-color: #f91944;
+  border: 1px solid #f91944 !important;
   padding: 0 30px;
   border: none;
   border-radius: 30px;
+  transition: 0.5s;
+}
+.sign-up-btn:hover {
+  border: 1px solid black !important;
+  background-color: black;
 }

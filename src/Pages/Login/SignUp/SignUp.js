@@ -7,7 +7,7 @@ import SocialLogin from "../SocialLogin/SocialLogin";
 const SignUp = () => {
   return (
     <div className="container my-5 py-4">
-      <Row className="login-container">
+      <Row className="form-container">
         <Col md={3}></Col>
         <Col md={6}>
           <div className="mx-auto w-75 mb-5">

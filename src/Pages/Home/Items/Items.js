@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Row } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 import Item from "../Item/Item";
 import ItemDetails from "../ItemDetails/ItemDetails";
 import "./Items.css";
@@ -8,6 +9,7 @@ const Items = () => {
   const [loadItems, setLoadItems] = useState("breakfast.json");
   const [items, setItems] = useState([]);
   const [itemId, setItemId] = useState("");
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetch(loadItems)
@@ -40,7 +42,9 @@ const Items = () => {
       ) : (
         <ItemDetails itemId={itemId} items={items}></ItemDetails>
       )}
-      <button className="checkout-btn my-5 border-0 d-block mx-auto">Checkout Your Food</button>
+      <button onClick={() => navigate("/cart")} className="checkout-btn my-5 border-0 d-block mx-auto">
+        Checkout Your Food
+      </button>
     </div>
   );
 };
