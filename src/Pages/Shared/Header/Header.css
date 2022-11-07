@@ -1,14 +1,14 @@
-.menu-items img {
-  width: 150px;
+.menu-bar img {
+  width: 200px;
 }
-.menu-items a {
+.menu-bar a {
   color: black;
   font-size: 22px;
   font-weight: 600;
   margin-right: 30px;
   transition: 0.5s;
 }
-.menu-items a:hover {
+.menu-bar a:hover {
   color: #f91944;
 }
 
@@ -25,4 +25,10 @@
 .sign-up-btn:hover {
   border: 1px solid black !important;
   background-color: black;
+}
+
+@media only screen and (max-width: 576px) {
+  .menu-bar a {
+    text-align: center;
+  }
 }

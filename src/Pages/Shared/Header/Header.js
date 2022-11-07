@@ -10,7 +10,7 @@ const Header = () => {
   const navigate = useNavigate();
 
   return (
-    <Navbar className="py-4 menu-items" collapseOnSelect expand="lg" bg="light" variant="light">
+    <Navbar className="py-4 menu-bar" collapseOnSelect expand="lg" bg="light" variant="light">
       <Container>
         <Navbar.Brand as={Link} to="/">
           <img src={logo} alt="" />
