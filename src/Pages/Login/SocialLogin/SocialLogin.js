@@ -5,6 +5,7 @@ import { faGooglePlusG, faGithub, faFacebook } from "@fortawesome/free-brands-sv
 import auth from "../../../firebase.init";
 import { useSignInWithFacebook, useSignInWithGithub, useSignInWithGoogle } from "react-firebase-hooks/auth";
 import { useNavigate } from "react-router-dom";
+import Loading from "../../Shared/Loading/Loading";
 
 const SocialLogin = () => {
   const [signInWithGoogle, googleUser, googleLoading, googleError] = useSignInWithGoogle(auth);
@@ -13,13 +14,19 @@ const SocialLogin = () => {
   const navigate = useNavigate();
 
   let errorElement;
-  if (googleError) {
-    errorElement = <p className="text-danger">Error: {googleError.message} </p>;
+  if (googleError || githubError || facebookError) {
+    errorElement = (
+      <p className="text-danger">
+        Error: {googleError?.message} {githubError?.message} {facebookError?.message}
+      </p>
+    );
   }
-  if (googleLoading) {
-    return <p>Loading...</p>;
+
+  if (googleLoading || githubLoading || facebookLoading) {
+    return <Loading></Loading>;
   }
-  if (googleUser) {
+
+  if (googleUser || githubUser || facebookUser) {
     return navigate("/");
   }
 

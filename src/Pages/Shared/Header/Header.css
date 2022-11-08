@@ -12,8 +12,22 @@
   color: #f91944;
 }
 
+.logout-btn {
+  color: black;
+  font-size: 22px;
+  font-weight: 600;
+  margin-right: 30px;
+  border: none;
+  background-color: white;
+  transition: 0.5s;
+}
+.logout-btn:hover {
+  color: #f91944;
+  background-color: white;
+}
+
 .sign-up-btn {
-  font-size: 18px;
+  font-size: 20px;
   color: white;
   background-color: #f91944;
   border: 1px solid #f91944 !important;
@@ -25,6 +39,10 @@
 .sign-up-btn:hover {
   border: 1px solid black !important;
   background-color: black;
+}
+
+.user-img {
+  width: 50px !important;
 }
 
 @media only screen and (max-width: 576px) {
