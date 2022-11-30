@@ -12,6 +12,15 @@
   color: #f91944;
 }
 
+.cart-badge {
+  font-size: 16px;
+  background-color: #f91944 !important;
+  border-radius: 50%;
+  padding: 3px 4px;
+  top: -18px;
+  position: relative;
+}
+
 .logout-btn {
   color: black;
   font-size: 22px;

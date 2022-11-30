@@ -8,6 +8,7 @@ import Loading from "../../Shared/Loading/Loading";
 import SocialLogin from "../SocialLogin/SocialLogin";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import PageTitle from "../../Shared/PageTitle/PageTitle";
 
 const SignUp = () => {
   const [name, setName] = useState("");
@@ -42,6 +43,7 @@ const SignUp = () => {
 
   return (
     <div className="container my-5 py-4">
+      <PageTitle title="SignUp"></PageTitle>
       <Row className="form-container">
         <Col md={3}></Col>
         <Col md={6}>

@@ -4,6 +4,7 @@ import { Col, Row } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartPlus, faMinus, faPlus, faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
+import PageTitle from "../../Shared/PageTitle/PageTitle";
 
 const ItemDetails = ({ itemId, items }) => {
   const itemDetails = items.find((item) => item.id === itemId);
@@ -48,6 +49,7 @@ const ItemDetails = ({ itemId, items }) => {
 
   return (
     <Row className="my-5 py-5 item-details g-5">
+      <PageTitle title="Item Details"></PageTitle>
       <Col xs={12} md={5} className="mt-5">
         <h1>{name}</h1>
         <p>{description}</p>

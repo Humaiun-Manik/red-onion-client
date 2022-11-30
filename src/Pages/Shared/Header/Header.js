@@ -1,6 +1,6 @@
 import React from "react";
 import "./Header.css";
-import { Container, Nav, Navbar } from "react-bootstrap";
+import { Badge, Container, Nav, Navbar } from "react-bootstrap";
 import logo from "../../../images/logo2.png";
 import { Link, useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -26,6 +26,7 @@ const Header = () => {
           <Nav className="ms-auto ">
             <Nav.Link className="d-flex align-items-center justify-content-center" as={Link} to="/cart">
               <FontAwesomeIcon icon={faCartPlus}></FontAwesomeIcon>
+              <Badge className="cart-badge">0</Badge>
             </Nav.Link>
             {!user ? (
               <Nav.Link as={Link} to="/login">

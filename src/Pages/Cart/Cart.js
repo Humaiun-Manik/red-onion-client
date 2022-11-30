@@ -1,10 +1,12 @@
 import React from "react";
 import "./Cart.css";
 import { Button, Col, Form, Row } from "react-bootstrap";
+import PageTitle from "../Shared/PageTitle/PageTitle";
 
 const Cart = () => {
   return (
     <div className="container my-5 py-4">
+      <PageTitle title="Cart"></PageTitle>
       <Row>
         <Col md={6}>
           <h4>Edit Delivery Details</h4>

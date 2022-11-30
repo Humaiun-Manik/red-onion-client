@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Row } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
+import PageTitle from "../../Shared/PageTitle/PageTitle";
 import Item from "../Item/Item";
 import ItemDetails from "../ItemDetails/ItemDetails";
 import "./Items.css";
@@ -9,6 +10,7 @@ const Items = () => {
   const [loadItems, setLoadItems] = useState("breakfast.json");
   const [items, setItems] = useState([]);
   const [itemId, setItemId] = useState("");
+  const [title, setTitle] = useState("Home");
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -17,9 +19,10 @@ const Items = () => {
       .then((data) => setItems(data));
   }, [loadItems]);
 
-  const handleLoadItems = (items) => {
+  const handleLoadItems = (items, title) => {
     setLoadItems(items);
     setItemId("");
+    setTitle(title);
   };
 
   const handleItemDetails = (id) => {
@@ -28,10 +31,11 @@ const Items = () => {
 
   return (
     <div className="container">
+      <PageTitle title={title}></PageTitle>
       <div className="items-container d-flex justify-content-center my-5">
-        <button onClick={async () => await handleLoadItems("breakfast.json")}>Breakfast</button>
-        <button onClick={async () => await handleLoadItems("lunch.json")}>Lunch</button>
-        <button onClick={async () => await handleLoadItems("dinner.json")}>Dinner</button>
+        <button onClick={() => handleLoadItems("breakfast.json", "Breakfast")}>Breakfast</button>
+        <button onClick={() => handleLoadItems("lunch.json", "Lunch")}>Lunch</button>
+        <button onClick={() => handleLoadItems("dinner.json", "Dinner")}>Dinner</button>
       </div>
       {!itemId ? (
         <Row xs={1} md={2} lg={3} className="g-5 my-5">

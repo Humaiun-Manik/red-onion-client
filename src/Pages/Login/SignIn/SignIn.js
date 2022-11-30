@@ -9,6 +9,7 @@ import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from "react-
 import Loading from "../../Shared/Loading/Loading";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import PageTitle from "../../Shared/PageTitle/PageTitle";
 
 const SignIn = () => {
   const [email, setEmail] = useState("");
@@ -48,6 +49,7 @@ const SignIn = () => {
 
   return (
     <div className="container my-5 py-4">
+      <PageTitle title="Login"></PageTitle>
       <Row className="form-container">
         <Col md={3}></Col>
         <Col md={6}>

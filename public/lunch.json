@@ -5,7 +5,8 @@
     "price": "23.99",
     "title": "How we dream about our future",
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores provident, ipsum est quod sapiente laboriosam ducimus iusto nesciunt veniam asperiores.",
-    "img": "https://i.ibb.co/1Jtdqnj/lunch6.png"
+    "img": "https://i.ibb.co/1Jtdqnj/lunch6.png",
+    "quantity": 0
   },
   {
     "id": 2,
@@ -13,7 +14,8 @@
     "price": "9.99",
     "title": "How we dream about our future",
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores provident, ipsum est quod sapiente laboriosam ducimus iusto nesciunt veniam asperiores.",
-    "img": "https://i.ibb.co/5rD2Dnx/lunch5.png"
+    "img": "https://i.ibb.co/5rD2Dnx/lunch5.png",
+    "quantity": 0
   },
   {
     "id": 3,
@@ -21,7 +23,8 @@
     "price": "6.99",
     "title": "How we dream about our future",
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores provident, ipsum est quod sapiente laboriosam ducimus iusto nesciunt veniam asperiores.",
-    "img": "https://i.ibb.co/GvZNN6X/lunch3.png"
+    "img": "https://i.ibb.co/GvZNN6X/lunch3.png",
+    "quantity": 0
   },
   {
     "id": 4,
@@ -29,7 +32,8 @@
     "price": "8.99",
     "title": "How we dream about our future",
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores provident, ipsum est quod sapiente laboriosam ducimus iusto nesciunt veniam asperiores.",
-    "img": "https://i.ibb.co/vPddLqb/lunch4.png"
+    "img": "https://i.ibb.co/vPddLqb/lunch4.png",
+    "quantity": 0
   },
   {
     "id": 5,
@@ -37,7 +41,8 @@
     "price": "15.99",
     "title": "How we dream about our future",
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores provident, ipsum est quod sapiente laboriosam ducimus iusto nesciunt veniam asperiores.",
-    "img": "https://i.ibb.co/Mg1dQvY/lunch1.png"
+    "img": "https://i.ibb.co/Mg1dQvY/lunch1.png",
+    "quantity": 0
   },
   {
     "id": 6,
@@ -45,6 +50,7 @@
     "price": "7.99",
     "title": "How we dream about our future",
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores provident, ipsum est quod sapiente laboriosam ducimus iusto nesciunt veniam asperiores.",
-    "img": "https://i.ibb.co/NywNrN8/lunch2.png"
+    "img": "https://i.ibb.co/NywNrN8/lunch2.png",
+    "quantity": 0
   }
 ]
