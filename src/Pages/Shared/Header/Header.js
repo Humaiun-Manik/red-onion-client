@@ -24,6 +24,9 @@ const Header = () => {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ms-auto ">
+            <Nav.Link as={Link} to="/home">
+              Home
+            </Nav.Link>
             <Nav.Link className="d-flex align-items-center justify-content-center" as={Link} to="/cart">
               <FontAwesomeIcon icon={faCartPlus}></FontAwesomeIcon>
               <Badge className="cart-badge">0</Badge>

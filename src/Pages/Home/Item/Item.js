@@ -3,10 +3,10 @@ import "./Item.css";
 import { Card, Col } from "react-bootstrap";
 
 const Item = ({ item, handleItemDetails }) => {
-  const { id, name, img, title, price } = item;
+  const { _id, name, img, title, price } = item;
 
   return (
-    <Col onClick={() => handleItemDetails(id)} className="item">
+    <Col onClick={() => handleItemDetails(_id)} className="item">
       <Card className="text-center border-0">
         <Card.Img className="w-75 mx-auto mb-4" variant="top" src={img} />
         <Card.Body>

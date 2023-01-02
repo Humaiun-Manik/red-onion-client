@@ -7,14 +7,14 @@ import ItemDetails from "../ItemDetails/ItemDetails";
 import "./Items.css";
 
 const Items = () => {
-  const [loadItems, setLoadItems] = useState("breakfast.json");
+  const [loadItems, setLoadItems] = useState("breakfast");
   const [items, setItems] = useState([]);
   const [itemId, setItemId] = useState("");
   const [title, setTitle] = useState("Home");
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch(loadItems)
+    fetch(`http://localhost:5000/meal-time?time=${loadItems}`)
       .then((res) => res.json())
       .then((data) => setItems(data));
   }, [loadItems]);
@@ -33,14 +33,14 @@ const Items = () => {
     <div className="container">
       <PageTitle title={title}></PageTitle>
       <div className="items-container d-flex justify-content-center my-5">
-        <button onClick={() => handleLoadItems("breakfast.json", "Breakfast")}>Breakfast</button>
-        <button onClick={() => handleLoadItems("lunch.json", "Lunch")}>Lunch</button>
-        <button onClick={() => handleLoadItems("dinner.json", "Dinner")}>Dinner</button>
+        <button onClick={() => handleLoadItems("breakfast", "Breakfast")}>Breakfast</button>
+        <button onClick={() => handleLoadItems("lunch", "Lunch")}>Lunch</button>
+        <button onClick={() => handleLoadItems("dinner", "Dinner")}>Dinner</button>
       </div>
       {!itemId ? (
         <Row xs={1} md={2} lg={3} className="g-5 my-5">
-          {items.map((item) => (
-            <Item key={item.id} item={item} handleItemDetails={handleItemDetails}></Item>
+          {items?.map((item) => (
+            <Item key={item._id} item={item} handleItemDetails={handleItemDetails}></Item>
           ))}
         </Row>
       ) : (

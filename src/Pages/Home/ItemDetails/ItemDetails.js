@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "./ItemDetails.css";
 import { Col, Row } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -7,19 +7,13 @@ import { useState } from "react";
 import PageTitle from "../../Shared/PageTitle/PageTitle";
 
 const ItemDetails = ({ itemId, items }) => {
-  const itemDetails = items.find((item) => item.id === itemId);
+  const itemDetails = items.find((item) => item._id === itemId);
   const [item, setItem] = useState(itemDetails);
-  const [itemNumber, setItemNumber] = useState();
-  const [totalPrice, setTotalPrice] = useState();
+  const { _id, name, price, description, img } = item;
+  const [itemNumber, setItemNumber] = useState(1);
+  const [totalPrice, setTotalPrice] = useState(price);
   const [itemsImg, setItemsImg] = useState(items.slice(0, 2));
   const [currentIndex, setCurrentIndex] = useState(2);
-
-  const { name, price, description, img } = item;
-
-  useEffect(() => {
-    setItemNumber(1);
-    setTotalPrice(parseFloat(price));
-  }, [item]);
 
   const handleItemMinus = () => {
     if (itemNumber <= 1) {
@@ -47,6 +41,16 @@ const ItemDetails = ({ itemId, items }) => {
     }
   };
 
+  const handleItem = (item) => {
+    setItem(item);
+    setItemNumber(1);
+    setTotalPrice(item.price);
+  };
+
+  const handleAddToCart = (id) => {
+    console.log(id, itemNumber, totalPrice);
+  };
+
   return (
     <Row className="my-5 py-5 item-details g-5">
       <PageTitle title="Item Details"></PageTitle>
@@ -65,12 +69,12 @@ const ItemDetails = ({ itemId, items }) => {
             </button>
           </div>
         </div>
-        <button className="add-btn">
+        <button onClick={() => handleAddToCart(_id)} className="add-btn">
           <FontAwesomeIcon className="me-3" icon={faCartPlus}></FontAwesomeIcon>Add
         </button>
         <div className="d-flex align-items-center my-5 py-4 items-img-container">
           {itemsImg.map((itemImg) => (
-            <img onClick={() => setItem(itemImg)} key={itemImg.id} src={itemImg.img} alt="" />
+            <img onClick={() => handleItem(itemImg)} key={itemImg._id} src={itemImg.img} alt="" />
           ))}
           <button className="angle-right-btn w-100" onClick={displayNextTwoImg}>
             <FontAwesomeIcon icon={faAngleRight}></FontAwesomeIcon>

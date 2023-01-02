@@ -1,0 +1,164 @@
+[
+  {
+    "time": "breakfast",
+    "name": "Bagel and cream cheese",
+    "price": "6.99",
+    "title": "How we dream about our future",
+    "description": "A bagel and cream cheese is a common food pairing in American cuisine, the cuisine of New York City, and American Jewish cuisine, consisting in its basic form of a sliced bagel spread with cream cheese. The bagel with cream cheese is traditionally and most commonly served open-faced, sliced horizontally and spread with cream cheese and other toppings.",
+    "img": "https://i.ibb.co/8gMc68t/breakfast4.png",
+    "quantity": 0
+  },
+  {
+    "time": "breakfast",
+    "name": "Breakfast sandwich",
+    "price": "9.99",
+    "title": "How we dream about our future",
+    "description": "From the classic Egg McMuffin to blueberry and brie grilled cheese, there are enough morning delights to keep you going for weeks. Bread is just one of those things I can’t live without, and there’s nothing more comforting than a crunchy, warm breakfast sandwich. I find them so satisfying, and they can be super versatile with the right recipe.",
+    "img": "https://i.ibb.co/BwC7skc/breakfast2.png",
+    "quantity": 0
+  },
+  {
+    "time": "breakfast",
+    "name": "Baked Chicken",
+    "price": "10.99",
+    "title": "How we dream about our future",
+    "description": "This simple baked chicken recipe is so easy to customize. You can chopped fresh herbs, like rosemary, thyme, tarragon, marjoram, sage, parsley, and oregano. Other flavoring options include minced garlic, paprika or even lemon or orange zest.",
+    "img": "https://i.ibb.co/f0jtfsv/breakfast3.png",
+    "quantity": 0
+  },
+  {
+    "time": "breakfast",
+    "name": "Eggs Benedict",
+    "price": "8.99",
+    "title": "How we dream about our future",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores provident, ipsum est quod sapiente laboriosam ducimus iusto nesciunt veniam asperiores.",
+    "img": "https://i.ibb.co/Ssw2Yhm/breakfast1.png",
+    "quantity": 0
+  },
+  {
+    "time": "breakfast",
+    "name": "Toast Croissant Fried eggs",
+    "price": "19.99",
+    "title": "How we dream about our future",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores provident, ipsum est quod sapiente laboriosam ducimus iusto nesciunt veniam asperiores.",
+    "img": "https://i.ibb.co/7WcPBG0/breakfast6.png",
+    "quantity": 0
+  },
+  {
+    "time": "breakfast",
+    "name": "Full Breakfast Fried Toast Brunch",
+    "price": "5.99",
+    "title": "How we dream about our future",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores provident, ipsum est quod sapiente laboriosam ducimus iusto nesciunt veniam asperiores.",
+    "img": "https://i.ibb.co/XXFVs7L/breakfast5.png",
+    "quantity": 0
+  },
+  {
+    "time": "lunch",
+    "name": "Healthy Meal Plan",
+    "price": "23.99",
+    "title": "How we dream about our future",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores provident, ipsum est quod sapiente laboriosam ducimus iusto nesciunt veniam asperiores.",
+    "img": "https://i.ibb.co/1Jtdqnj/lunch6.png",
+    "quantity": 0
+  },
+  {
+    "time": "lunch",
+    "name": "Fried Chicken Bento",
+    "price": "9.99",
+    "title": "How we dream about our future",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores provident, ipsum est quod sapiente laboriosam ducimus iusto nesciunt veniam asperiores.",
+    "img": "https://i.ibb.co/5rD2Dnx/lunch5.png",
+    "quantity": 0
+  },
+  {
+    "time": "lunch",
+    "name": "Tarragon-Rubbed-Salmon",
+    "price": "6.99",
+    "title": "How we dream about our future",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores provident, ipsum est quod sapiente laboriosam ducimus iusto nesciunt veniam asperiores.",
+    "img": "https://i.ibb.co/GvZNN6X/lunch3.png",
+    "quantity": 0
+  },
+  {
+    "time": "lunch",
+    "name": "Indian Lunch",
+    "price": "8.99",
+    "title": "How we dream about our future",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores provident, ipsum est quod sapiente laboriosam ducimus iusto nesciunt veniam asperiores.",
+    "img": "https://i.ibb.co/vPddLqb/lunch4.png",
+    "quantity": 0
+  },
+  {
+    "time": "lunch",
+    "name": "Beef Steak",
+    "price": "15.99",
+    "title": "How we dream about our future",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores provident, ipsum est quod sapiente laboriosam ducimus iusto nesciunt veniam asperiores.",
+    "img": "https://i.ibb.co/Mg1dQvY/lunch1.png",
+    "quantity": 0
+  },
+  {
+    "time": "lunch",
+    "name": "Honey-Soy-Glazed Salmon with Peppers",
+    "price": "7.99",
+    "title": "How we dream about our future",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores provident, ipsum est quod sapiente laboriosam ducimus iusto nesciunt veniam asperiores.",
+    "img": "https://i.ibb.co/NywNrN8/lunch2.png",
+    "quantity": 0
+  },
+  {
+    "time": "dinner",
+    "name": "Salmon with Grapefruit and Lentil Salad",
+    "price": "9.99",
+    "title": "How we dream about our future",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores provident, ipsum est quod sapiente laboriosam ducimus iusto nesciunt veniam asperiores.",
+    "img": "https://i.ibb.co/bz7Y7KJ/dinner6.png",
+    "quantity": 0
+  },
+  {
+    "time": "dinner",
+    "name": "Lemony Salmon Piccata",
+    "price": "11.99",
+    "title": "How we dream about our future",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores provident, ipsum est quod sapiente laboriosam ducimus iusto nesciunt veniam asperiores.",
+    "img": "https://i.ibb.co/VQCbVwV/dinner2.png",
+    "quantity": 0
+  },
+  {
+    "time": "dinner",
+    "name": "Pork Tenderloin with Quinoa Pilaf",
+    "price": "14.99",
+    "title": "How we dream about our future",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores provident, ipsum est quod sapiente laboriosam ducimus iusto nesciunt veniam asperiores.",
+    "img": "https://i.ibb.co/W6qbHNq/dinner5.png",
+    "quantity": 0
+  },
+  {
+    "time": "dinner",
+    "name": "French fries with cheese",
+    "price": "8.99",
+    "title": "How we dream about our future",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores provident, ipsum est quod sapiente laboriosam ducimus iusto nesciunt veniam asperiores.",
+    "img": "https://i.ibb.co/HxZmQmf/dinner4.png",
+    "quantity": 0
+  },
+  {
+    "time": "dinner",
+    "name": "Garlic Butter Baked Salmon",
+    "price": "6.99",
+    "title": "How we dream about our future",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores provident, ipsum est quod sapiente laboriosam ducimus iusto nesciunt veniam asperiores.",
+    "img": "https://i.ibb.co/GcQQVzd/dinner3.png",
+    "quantity": 0
+  },
+  {
+    "time": "dinner",
+    "name": "Baked Chicken",
+    "price": "10.99",
+    "title": "How we dream about our future",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores provident, ipsum est quod sapiente laboriosam ducimus iusto nesciunt veniam asperiores.",
+    "img": "https://i.ibb.co/bNLFLrD/dinner1.png",
+    "quantity": 0
+  }
+]
