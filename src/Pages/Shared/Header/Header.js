@@ -10,10 +10,17 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { signOut } from "firebase/auth";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useQuery } from "react-query";
 
 const Header = () => {
   const navigate = useNavigate();
   const [user] = useAuthState(auth);
+  const email = user?.email;
+
+  const { data, refetch } = useQuery(["order", email], () =>
+    fetch(`http://localhost:5000/order?email=${email}`).then((res) => res.json())
+  );
+  refetch();
 
   return (
     <Navbar className="py-4 menu-bar" collapseOnSelect expand="lg" bg="light" variant="light">
@@ -29,7 +36,7 @@ const Header = () => {
             </Nav.Link>
             <Nav.Link className="d-flex align-items-center justify-content-center" as={Link} to="/cart">
               <FontAwesomeIcon icon={faCartPlus}></FontAwesomeIcon>
-              <Badge className="cart-badge">0</Badge>
+              <Badge className="cart-badge">{data?.length}</Badge>
             </Nav.Link>
             {!user ? (
               <Nav.Link as={Link} to="/login">

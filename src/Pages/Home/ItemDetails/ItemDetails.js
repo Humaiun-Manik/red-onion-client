@@ -5,6 +5,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartPlus, faMinus, faPlus, faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 import PageTitle from "../../Shared/PageTitle/PageTitle";
+import { useAuthState } from "react-firebase-hooks/auth";
+import auth from "../../../firebase.init";
+import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 
 const ItemDetails = ({ itemId, items }) => {
   const itemDetails = items.find((item) => item._id === itemId);
@@ -14,6 +18,8 @@ const ItemDetails = ({ itemId, items }) => {
   const [totalPrice, setTotalPrice] = useState(price);
   const [itemsImg, setItemsImg] = useState(items.slice(0, 2));
   const [currentIndex, setCurrentIndex] = useState(2);
+  const [user] = useAuthState(auth);
+  const navigate = useNavigate();
 
   const handleItemMinus = () => {
     if (itemNumber <= 1) {
@@ -48,7 +54,34 @@ const ItemDetails = ({ itemId, items }) => {
   };
 
   const handleAddToCart = (id) => {
-    console.log(id, itemNumber, totalPrice);
+    if (user) {
+      const order = {
+        mealId: id,
+        name,
+        img,
+        price,
+        quantity: itemNumber,
+        email: user.email,
+      };
+
+      fetch("http://localhost:5000/order", {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(order),
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          if (data.success) {
+            toast.success("Successfully meal added to the cart");
+          } else {
+            toast.error("Already added this meal to the cart");
+          }
+        });
+    } else {
+      navigate("/login");
+    }
   };
 
   return (

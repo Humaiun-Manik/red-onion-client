@@ -2,8 +2,17 @@ import React from "react";
 import "./Cart.css";
 import { Button, Col, Form, Row } from "react-bootstrap";
 import PageTitle from "../Shared/PageTitle/PageTitle";
+import { useQuery } from "react-query";
+import { useAuthState } from "react-firebase-hooks/auth";
+import auth from "../../firebase.init";
 
 const Cart = () => {
+  const [user] = useAuthState(auth);
+  const email = user?.email;
+  const { data, refetch } = useQuery(["order", email], () =>
+    fetch(`http://localhost:5000/order?email=${email}`).then((res) => res.json())
+  );
+
   return (
     <div className="container my-5 py-4">
       <PageTitle title="Cart"></PageTitle>
@@ -45,7 +54,12 @@ const Cart = () => {
           <div>
             <ul className="p-0 me-5 ">
               <li className="d-flex justify-content-between">
-                <p className="mb-0 mt-3 fs-5">Subtotal.4 item</p>
+                <p className="mb-0 mt-3 fs-5 d-flex">
+                  Subtotal{" "}
+                  <ul>
+                    <li>{data.length} item</li>
+                  </ul>
+                </p>
                 <p className="mb-0 mt-3 fs-5">$260.00</p>
               </li>
               <li className="d-flex justify-content-between">
