@@ -17,10 +17,9 @@ const Header = () => {
   const [user] = useAuthState(auth);
   const email = user?.email;
 
-  const { data, refetch } = useQuery(["order", email], () =>
+  const { data } = useQuery(["orders", email], () =>
     fetch(`http://localhost:5000/order?email=${email}`).then((res) => res.json())
   );
-  refetch();
 
   return (
     <Navbar className="py-4 menu-bar" collapseOnSelect expand="lg" bg="light" variant="light">

@@ -1,7 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import Cart from "./Pages/Cart/Cart";
+import Cart from "./Pages/Checkout/Cart/Cart";
 import Home from "./Pages/Home/Home/Home";
 import RequireAuth from "./Pages/Login/RequireAuth/RequireAuth";
 import SignIn from "./Pages/Login/SignIn/SignIn";
