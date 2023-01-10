@@ -9,11 +9,11 @@
 - Users can order food from this website.
 - Users can see all order foods.
 
-#### Live Site Link:
+#### Live Site Link: https://red-onion-6dd50.web.app
 
 #
 
-Technology we use to build this project:
+Technology i use to build this project:
 
 - JSX
 - NODE.js
