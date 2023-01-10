@@ -64,7 +64,7 @@ const ItemDetails = ({ itemId, items }) => {
         email: user.email,
       };
 
-      fetch("http://localhost:5000/order", {
+      fetch("https://red-onion-lzm5.onrender.com/order", {
         method: "POST",
         headers: {
           "content-type": "application/json",

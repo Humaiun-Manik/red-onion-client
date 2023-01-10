@@ -19,10 +19,3 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
 export default auth;
-
-/* apiKey: "AIzaSyAPkLxed5OCNoI4XZEm1CkxH_zCES30CuE",
-  authDomain: "red-onion-52f5b.firebaseapp.com",
-  projectId: "red-onion-52f5b",
-  storageBucket: "red-onion-52f5b.appspot.com",
-  messagingSenderId: "862213713218",
-  appId: "1:862213713218:web:6808d013563ced95d12cdb", */

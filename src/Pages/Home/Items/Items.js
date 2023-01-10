@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Row } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
+import Loading from "../../Shared/Loading/Loading";
 import PageTitle from "../../Shared/PageTitle/PageTitle";
 import Item from "../Item/Item";
 import ItemDetails from "../ItemDetails/ItemDetails";
@@ -11,13 +12,25 @@ const Items = () => {
   const [items, setItems] = useState([]);
   const [itemId, setItemId] = useState("");
   const [title, setTitle] = useState("Home");
+  const [isLoading, setIsLoading] = useState(true);
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch(`http://localhost:5000/meal-time?time=${loadItems}`)
+    fetch(`https://red-onion-lzm5.onrender.com/meal-time?time=${loadItems}`)
       .then((res) => res.json())
-      .then((data) => setItems(data));
+      .then((data) => {
+        if (!data) {
+          setIsLoading(true);
+        } else {
+          setIsLoading(false);
+          setItems(data);
+        }
+      });
   }, [loadItems]);
+
+  if (isLoading) {
+    return <Loading></Loading>;
+  }
 
   const handleLoadItems = (items, title) => {
     setLoadItems(items);

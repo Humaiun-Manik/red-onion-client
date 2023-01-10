@@ -5,7 +5,6 @@ import React, { useState } from "react";
 const OrderFood = ({ meal }) => {
   const { name, img, price, quantity } = meal;
   const [itemNumber, setItemNumber] = useState(quantity);
-  //   const [totalPrice, setTotalPrice] = useState();
 
   const handleItemMinus = () => {
     if (itemNumber <= 1) {

@@ -18,7 +18,7 @@ const Header = () => {
   const email = user?.email;
 
   const { data } = useQuery(["orders", email], () =>
-    fetch(`http://localhost:5000/order?email=${email}`).then((res) => res.json())
+    fetch(`https://red-onion-lzm5.onrender.com/order?email=${email}`).then((res) => res.json())
   );
 
   return (
