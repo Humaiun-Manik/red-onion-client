@@ -16,7 +16,7 @@ const Items = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch(`https://red-onion-bp2q.onrender.com/meal-time?time=${loadItems}`)
+    fetch(`https://red-onion-server-five.vercel.app/meal-time?time=${loadItems}`)
       .then((res) => res.json())
       .then((data) => {
         if (!data) {

@@ -64,7 +64,7 @@ const ItemDetails = ({ itemId, items }) => {
         email: user.email,
       };
 
-      fetch("https://red-onion-bp2q.onrender.com/order", {
+      fetch("https://red-onion-server-five.vercel.app/order", {
         method: "POST",
         headers: {
           "content-type": "application/json",
